@@ -24,3 +24,6 @@ C:\Users\User\Desktop\ORISEx\Example1\obj\Debug\net7.0\refint\Example1.dll
 C:\Users\User\Desktop\ORISEx\Example1\obj\Debug\net7.0\Example1.pdb
 C:\Users\User\Desktop\ORISEx\Example1\obj\Debug\net7.0\Example1.genruntimeconfig.cache
 C:\Users\User\Desktop\ORISEx\Example1\obj\Debug\net7.0\ref\Example1.dll
+C:\Users\User\Desktop\ORISEx\Example1\bin\Debug\net7.0\Example1.staticwebassets.runtime.json
+C:\Users\User\Desktop\ORISEx\Example1\obj\Debug\net7.0\Example1.RazorAssemblyInfo.cache
+C:\Users\User\Desktop\ORISEx\Example1\obj\Debug\net7.0\Example1.RazorAssemblyInfo.cs

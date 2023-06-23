@@ -1,0 +1,9 @@
+﻿using Example1.IServices;
+
+namespace Example1.Services;
+
+public class TransientService :IService
+{
+
+    public Guid Guid { get => Guid.NewGuid(); }
+}

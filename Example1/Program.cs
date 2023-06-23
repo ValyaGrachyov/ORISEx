@@ -1,18 +1,82 @@
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Text.Json;
+using Example1;
+using Example1.IServices;
+using Example1.Services;
+using Microsoft.AspNetCore.Rewrite;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IService,ScopeService>();
+builder.Services.AddSingleton<IService,SingletonService>();
+builder.Services.AddTransient<IService,TransientService>();
+
+
+builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
+var exception = "";
 
-app.Map("/error/{code}", (int code) => $"{code}");
+
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.MapRazorPages();
+
+app.UseMiddleware<CustomMiddleware>();
+
+
+app.Map("/test",app => app.Run(async context =>
+{
+    try
+    {
+        throw new Exception("smth");
+    }
+    catch (Exception e)
+    {
+        context.Items["Exception"] = e.Message;
+        exception = e.Message;  
+    }
+}));
+
+app.Map("/Error",() => exception);
+
 
 app.Run();
+
+
+
+// app.Map("/", () =>
+// {
+//     var serviceCollection= new ServiceCollection();
+//     serviceCollection.AddScoped<ScopeService>();
+//     var serviceProvider= serviceCollection.BuildServiceProvider();
+//
+//     var t = serviceProvider.GetService(typeof(ScopeService));
+// });
+
+//Позволяет отобразить пользователю если у него будет какая-нибудь ошибка
+//app.UseStatusCodePages("text/plain", "Error. Status code: {0}");
+// То же самое, только делается Redirect по пути
+//app.UseStatusCodePagesWithRedirects("/StatusCode/{0}");
+
+/*
+//Примерчик с работой с контекстом
+app.Run(async context =>
+{
+    context.Response.Headers.Append("Test", "value");
+    await context.Response.WriteAsync("Hello world");
+});
+*/
+
 
 /*
  app.Map("/", Main);
  
  static void Main(IApplicationBuilder app)
  {
-    app.Run(async context =>
+    app.Run(async context =>3
     {
         await context.Response.WriteAsync("Smth");
     });

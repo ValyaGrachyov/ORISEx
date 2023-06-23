@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "SBvWveMfLAMbofNXtqkLjIFbPFfsExOgpDk08pnMvKc=",
+  "Hash": "TlVXw5xgFQoQaXye527Bt/CatKhNVN6CVqxn6nguXfg=",
   "Source": "Example1",
   "BasePath": "_content/Example1",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Example1\\wwwroot",
+      "Source": "Example1",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\ORISEx\\Example1\\wwwroot\\",
+      "BasePath": "_content/Example1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\ORISEx\\Example1\\wwwroot\\favicon.ico",
+      "SourceId": "Example1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\ORISEx\\Example1\\wwwroot\\",
+      "BasePath": "_content/Example1",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.ico"
+    }
+  ]
 }
