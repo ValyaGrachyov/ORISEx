@@ -1,0 +1,17 @@
+C:\Users\User\Desktop\SLIV\Persistance\bin\Debug\net7.0\Persistance.deps.json
+C:\Users\User\Desktop\SLIV\Persistance\bin\Debug\net7.0\Persistance.runtimeconfig.json
+C:\Users\User\Desktop\SLIV\Persistance\bin\Debug\net7.0\Persistance.dll
+C:\Users\User\Desktop\SLIV\Persistance\bin\Debug\net7.0\Persistance.pdb
+C:\Users\User\Desktop\SLIV\Persistance\bin\Debug\net7.0\Domain.dll
+C:\Users\User\Desktop\SLIV\Persistance\bin\Debug\net7.0\Domain.pdb
+C:\Users\User\Desktop\SLIV\Persistance\obj\Debug\net7.0\Persistance.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\SLIV\Persistance\obj\Debug\net7.0\Persistance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\SLIV\Persistance\obj\Debug\net7.0\Persistance.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\SLIV\Persistance\obj\Debug\net7.0\Persistance.AssemblyInfo.cs
+C:\Users\User\Desktop\SLIV\Persistance\obj\Debug\net7.0\Persistance.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\SLIV\Persistance\obj\Debug\net7.0\Persistance.csproj.CopyComplete
+C:\Users\User\Desktop\SLIV\Persistance\obj\Debug\net7.0\Persistance.dll
+C:\Users\User\Desktop\SLIV\Persistance\obj\Debug\net7.0\refint\Persistance.dll
+C:\Users\User\Desktop\SLIV\Persistance\obj\Debug\net7.0\Persistance.pdb
+C:\Users\User\Desktop\SLIV\Persistance\obj\Debug\net7.0\Persistance.genruntimeconfig.cache
+C:\Users\User\Desktop\SLIV\Persistance\obj\Debug\net7.0\ref\Persistance.dll

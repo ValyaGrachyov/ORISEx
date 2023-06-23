@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Rewrite;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Services.AddScoped<IService,ScopeService>();
 builder.Services.AddSingleton<IService,SingletonService>();
 builder.Services.AddTransient<IService,TransientService>();
@@ -23,8 +24,8 @@ var exception = "";
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.MapRazorPages();
-
 app.UseMiddleware<CustomMiddleware>();
+
 
 
 app.Map("/test",app => app.Run(async context =>
@@ -43,18 +44,21 @@ app.Map("/test",app => app.Run(async context =>
 app.Map("/Error",() => exception);
 
 
+
+app.Map("/1", () =>
+{
+    var serviceCollection= new ServiceCollection();
+    serviceCollection.AddScoped<ScopeService>();
+    var serviceProvider= serviceCollection.BuildServiceProvider();
+    var t = serviceProvider.GetService(typeof(ScopeService));
+});
+
+
 app.Run();
 
 
 
-// app.Map("/", () =>
-// {
-//     var serviceCollection= new ServiceCollection();
-//     serviceCollection.AddScoped<ScopeService>();
-//     var serviceProvider= serviceCollection.BuildServiceProvider();
-//
-//     var t = serviceProvider.GetService(typeof(ScopeService));
-// });
+
 
 //Позволяет отобразить пользователю если у него будет какая-нибудь ошибка
 //app.UseStatusCodePages("text/plain", "Error. Status code: {0}");
